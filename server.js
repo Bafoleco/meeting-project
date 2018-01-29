@@ -12,7 +12,7 @@ var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
 
-mongoose.connect("mongodb://localhost/usersnstuff");
+mongoose.connect("mongodb://heroku_zn4rp3qx:unsecure1@ds117868.mlab.com:17868/heroku_zn4rp3qx");
 
 require('./config/passport')(passport);
 
