@@ -16,6 +16,7 @@ mongoose.connect("mongodb://heroku_zn4rp3qx:unsecure1@ds117868.mlab.com:17868/he
 
 require('./config/passport')(passport);
 
+app.set('port', process.env.PORT);
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser()); // get information from html forms
