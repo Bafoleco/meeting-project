@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT;
+const port = 8080;
 
 var mongoose = require('mongoose');
 var passport = require('passport');
@@ -15,8 +15,6 @@ var session      = require('express-session');
 mongoose.connect("mongodb://localhost/usersnstuff");
 
 require('./config/passport')(passport);
-
-app.set('port', process.env.PORT);
 
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
