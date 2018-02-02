@@ -1,7 +1,7 @@
 console.log('entered');
 const express = require('express');
 const app = express();
-const port = process.env.PORT;
+const port = 300 || process.env.PORT;
 
 var mongoose = require('mongoose');
 var passport = require('passport');
@@ -24,7 +24,7 @@ app.use(express.static('public'));
 app.set('view engine', 'pug');
 
 
-app.use(session({ 
+app.use(session({
     secret: 'undone cape discount magma outnumber repeater',
     resave: true,
     saveUninitialized: true
